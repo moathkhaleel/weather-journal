@@ -44,7 +44,7 @@ function addWeather(req, res) {
         date: req.body.date
     }
 
-    projectData.push(newEntry)
+    projectData = newEntry
     res.send(projectData)
     console.log(projectData)
 }
