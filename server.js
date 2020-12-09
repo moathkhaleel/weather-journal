@@ -26,7 +26,7 @@ function fetchData(request,response) {
 app.post('/saveWeather', fetchWeather);
 function fetchWeather(request, response) {
     dataLogged = {
-        input: request.body.input, 
+        input: request.body.feelings, 
         temp: request.body.temp,
         date: request.body.date
     }

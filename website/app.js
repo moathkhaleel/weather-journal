@@ -1,5 +1,5 @@
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&appid=f118de9b6ccce462a1e01c0e9bb5932d';
+const apiKey = '&appid=f118de9b6ccce462a1e01c0e9bb5932d&units=metric';
 
 document.getElementById('generate').addEventListener('click', performAction);
 
