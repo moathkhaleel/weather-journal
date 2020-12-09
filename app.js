@@ -15,13 +15,13 @@ function performAction(e) {
     getZip(baseURL, zip, apiKey) 
 
     .then(function(data) {
-        postData('/addWeather', {temp: data.temp, date: newDate, feelings: feelings})
+        postData('/addWeather', data = {temp: data.main.temp, date: newDate, feelings: feelings})
         updateUI()
     })
 }
 
-const postData = async ( url = '', data = {}) => {
-    const response = await fetch(url, {
+const postData = async (url, data) => {
+     const response = await fetch(url, {
         method: 'POST', 
         credentials: 'same-origin', 
         headers: {
@@ -34,7 +34,7 @@ const postData = async ( url = '', data = {}) => {
         return newData
     } catch(eror) {
         console.log("error", error);
-    }
+    } 
 };
 
 const getZip = async (baseURL, zip, key) => {

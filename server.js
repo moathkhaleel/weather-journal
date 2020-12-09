@@ -37,6 +37,7 @@ function getData(req,res) {
 app.post('/addWeather', addWeather);
 
 function addWeather(req, res) {
+    console.log('addWeather')
     newEntry = {
         feelings: req.body.feelings, 
         temp: req.body.temp,
